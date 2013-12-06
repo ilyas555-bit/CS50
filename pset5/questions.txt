@@ -1,0 +1,52 @@
+0.  BMP supports up to 16,777,216 colors (24-bit color), 
+    GIF supports 256 colors, JPEG supports 16,777,216 colors 
+    (24-bit color), PNG supports 16,777,216 colors (24-bit color).
+1.  GIF is a file format that supports animation.
+2.  Lossless compression recreates a compressed file as an identical 
+    match to its original form. It uses a technique to break a file 
+    into smaller segments that get reassembled later. It is used for
+    files that need to be reproduced exactly like the original. 
+    Lossy compression eliminates repeated or "unnecessary" pieces of 
+    data, and when the file is decompressed, the software's
+    reinterpretation of the original file is what is shown. This 
+    compression cannot be used to compress anything that needs to be
+    reproduced exactly.  
+3.  JPEG is a file format that is lossy-compressed.
+4.  When a file is deleted from the FAT file system, two things occur. 
+    Initially, the system changes the filname's first character in the 
+    file's directory entry to signal that the file has been deleted 
+    and the directory entry can be recycled. Furthermore, the system 
+    moves all of the file's FAT clusters to the hard drive's list of 
+    free clusters, but the actual file data is never touched. 
+5.  In order to ensure that files deleted cannot be recovered is to 
+    physically destroy the drive, making it unusable. Furthermore, 
+    degaussing the drive can randomize the magnietic domains and making
+    the drive unusable. Furthermore, the drive's data can also be 
+    overwritten so that the data cannot be recovered. 
+6.  The <stdint.h> header declares sets of integer types having 
+    specified widths.
+7.  The point of using uint8_t, uint32_t, int32_t and uint16_t 
+    in a program is to standardize the length of something that it is 
+    put next to, namely the number of bits per pixel in our case.
+8.  A BYTE is 8 bits or 1 byte, a DWORD is 32 bits or 4 bytes, a LONG 
+    is 32 bits or 4 bytes, and a WORD is 16 bits or 2 bytes
+9.  The first two bytes of any BMP file is 0x4D42 in 
+    hexadecimal.
+10. The difference between bfSize and biSize is that bfSize is inside 
+    the struct of BITMAPFILEHEADER while biSize is in the struct of 
+    BITMAPINFOHEADER. Both are DWORD, size of 4 bytes. bfSize says the
+    size of the file, while biSize is the size of the struct its in.
+11. If biHeight is negative, the bitmap is a top-down device-independent
+    bitmap (DIB) with the origin at the upper left corner. 
+12. biBitCount is a field in BITMAPINFOHEADER that specifies the BMP's 
+    color depth (bits per pixel). 
+13. fopen might return NULL if there is no space in memory to open the
+    output file, or if any other opening error occurs.
+14. The third argument to fread is always 1 because you want to only read 
+    1 element of data of the size we specify. 
+15. copy.c:70 assigns the value 3 to padding if bi.biWidth is 3. 
+16. fseek sets the file position data to a specific location in a file. 
+17. SEEK_CUR defines the current position in file. It specifies that 
+    offset is a count of characters from the current file position and 
+    this count can be positive or negative. 
+18. Milo Banana dun it. 

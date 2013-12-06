@@ -1,0 +1,45 @@
+0.  According to www.thefreedictionary.com, pneumonoultramicroscopicsilicovolcanoconiosis 
+    is a disease caused by the prolonged inhalation of fine siliceous dust.
+1.  According to manpages, getrusage returns information about the resources used in the 
+    current process. 
+2.  According to manpages, struct usage has 16 members.
+3.  We know the actual values for before and after and we want to pass the before and after
+    by reference to access the actual values. 
+4.  The for-loop contains many if-else structures. The for-loop first checks each character 
+    at a time inside the given text and will do that until it reaches an end of file. For 
+    each character, it will check if it is alphabetical or an apostrophe. If it is, it will 
+    add the character into the array of words and will increase the index number by 1 (the 
+    number of characters inside the word). After doing this, it will check if the index 
+    number is greater than the maximum length specified for a word in a dictionary (which is
+    45 characters) and if it is, it will go through the characters without adding it into the
+    word array until it either reaches the end of file or a space character. It will then 
+    reset the index to 0 to discard that word and prepare for a new word. However, if the 
+    character is not alphabetical but rather a digit, it will go through the rest of the 
+    characters without adding it into the word array until it either reaches the end of file 
+    or a space character. It will then reset the index to 0 to discard that word and prepare 
+    for a new word. If the character is not alphabetical or a digit, it will be a space bar
+    and as long as the word is greater than 0, it will terminate the word by adding a NULL 
+    character at the end of the string and then will update the word counter which counts
+    how many words have been recorded. Then it will put the word into the check function 
+    which will return a boolean and will indicate if it is a mispelled or a correct word. It
+    will then check the time before and after check and then it will print all the mispelled
+    words and increment mispelled words by one every time there is a mispelled word found. 
+    Then it will reset the index to 0 to prepare for a new word. Then the for-loop will be 
+    checked again and go to the same process as described above. 
+    word.  while the character is     
+5.  Using fgetc will allow to check and deal with digits inside words, which the program does 
+    not want to deal with. Using fscanf will only read whole words and will not be able to 
+    check each individual character inside the word. 
+6.  The parameters for check and load were declared as const so that the words that were 
+    passed in from speller cannot be changed. We can't change the words that were pulled in 
+    from the text and put into check and load. 
+7.  I used a trie in order to implement my spell checker. In each children node, there is a 
+    boolean is_word value where it will be true or false if a word is found by that children 
+    node. Furthermore, the children node also contains 27 other arrays that store the 
+    addresses or the letters that are present and will contain NULL if the letters are not
+    present. 
+8.  My code was 0.02 seconds slower because my unload was working incorrectly and was not 
+    implemented in an ideal way. 
+9.  I improved the unload so that it only has one for-loop and thus worked a little faster.
+10. There is probably a simpler way to implement load so that my total time will be a lot 
+    faster, but I was not able to find a way to make it implement perfectly. 
