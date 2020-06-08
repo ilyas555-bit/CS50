@@ -52,7 +52,7 @@ int main(void)
     if (money >= 5)
     {
         nickels = money / 5;
-        money = money % 5; 
+        money = money % 5;
     }
     if (money >= 1)
     {
